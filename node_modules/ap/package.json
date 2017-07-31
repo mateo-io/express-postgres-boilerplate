@@ -1,0 +1,34 @@
+{
+    "name" : "ap",
+    "version" : "0.2.0",
+    "description" : "Currying in javascript. Like .bind() without also setting `this`.",
+    "main" : "./index.js",
+    "directories" : {
+        "example" : "./examples"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "http://github.com/substack/node-ap.git"
+    },
+    "keywords" : [
+        "curry",
+        "apply",
+        "ap",
+        "bind",
+        "function",
+        "functional"
+    ],
+    "devDependencies" : {
+        "tap" : "0.2.5"
+    },
+    "author" : {
+        "name" : "James Halliday",
+        "email" : "mail@substack.net",
+        "url" : "http://substack.net"
+    },
+    "scripts" : {
+        "test" : "tap ./test"
+    },
+    "license" : "MIT/X11",
+    "engine" : { "node" : ">=0.4.0" }
+}
