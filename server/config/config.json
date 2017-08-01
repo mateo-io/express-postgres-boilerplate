@@ -1,10 +1,10 @@
 {
   "development": {
-    "username": "root",
+    "username": "fun",
     "password": null,
-    "database": "database_development",
+    "database": "fun",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "jbbytyqgytaztk",
+    "password": "d191fe5d7b40db7966fbee45965310552442fab23a64b15edd1cb298347032d2l",
+    "database": "d9v61lco0vj8li",
+    "host": "ec2-54-243-252-232.compute-1.amazonaws.com",
+    "dialect": "postgresql"
   }
 }
