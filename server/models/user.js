@@ -13,24 +13,34 @@ function hashPassword(user) {
 
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING
+    name: { type: DataTypes.STRING, allowNull: false, unique: false },
+    email: { type: DataTypes.STRING, allowNull: false, unique: true },
+    isAdmin: { type: DataTypes.STRING, allowNull: false, unique: true, default: false },
+    password: { type: DataTypes.STRING, allowNull: false },
   }, {
     hooks: {
       beforeCreate: hashPassword,
       beforeUpdate: hashPassword,
     },
-    classMethods: {
-      associate: (models) => {
-        // associations can be defined here
-      }
-    },
+  });
+
+  User.prototype.isValidPassword = function(password) {
+        return bcrypt.compareSync(password, this.password);
+  }
+
+  return User;
+};
+
+
+
+    /*
     instanceMethods: {
+      validPassword: function(password) {
+        console.log('valid password called');
+        return bcrypt.compareSync(password, this.password);
+      },
       isValidPassword(password) {
         return bcrypt.compare(password, this.password);
       },
     },
-  });
-  return User;
-};
+    */

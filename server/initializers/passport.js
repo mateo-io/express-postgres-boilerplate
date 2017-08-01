@@ -7,12 +7,37 @@ const BearerStrategy = require('passport-http-bearer').Strategy;
 
 const User = require('../models').User;
 
-//const { JWT_TOKEN } = require('../config/config');
-const JWT_TOKEN ='secret';
+const { JWT_TOKEN } = require('../config/config');
 
 /*
-passport.use(new LocalStrategy({ session: false }, (email, password, done) => {
-  User.find({ where: { email: email } })
+passport.use(new LocalStrategy({
+  session: false,
+  usernameField: 'email',
+  passwordField: 'password',
+ }, (email, password, done) => {
+  User.find({ where: { email } })
+    .then((user) => {
+      if (!user) { return done(null, false); }
+      console.log("USER FOUND NAME!", user.name)
+      console.log("User is password: ", user.isValidPassword('123456'));
+      return user;
+    //return Promise.all([user, user.isValidPassword(password)]);
+    })
+    .then(([user, isValid]) => {
+      if (!isValid) { return done(null, false); }
+      return done(null, user);
+    })
+    .catch(done);
+}));
+*/
+
+
+passport.use(new LocalStrategy({
+  session: false,
+  usernameField: 'email',
+  passwordField: 'password',
+ }, (email, password, done) => {
+  User.findOne( {where: { email } })
     .then((user) => {
       if (!user) { return done(null, false); }
       return Promise.all([user, user.isValidPassword(password)]);
@@ -23,18 +48,6 @@ passport.use(new LocalStrategy({ session: false }, (email, password, done) => {
     })
     .catch(done);
 }));
-*/
-
-passport.use(new LocalStrategy(
-    function(email, password, done) {
-        var user = {
-            email: "name",
-            password: "password123"
-        }
-
-    return done(null, user);
-    }
-));
 
 
 

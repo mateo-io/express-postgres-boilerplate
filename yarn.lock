@@ -114,19 +114,19 @@ basic-auth@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-1.1.0.tgz#45221ee429f7ee1e5035be3f51533f1cdfd29884"
 
-bcrypt:
+bcrypt-pbkdf@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.1.tgz#63bc5dcb61331b92bc05fd528953c33462a06f8d"
+  dependencies:
+    tweetnacl "^0.14.3"
+
+bcrypt@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/bcrypt/-/bcrypt-1.0.2.tgz#d05fc5d223173e0e28ec381c0f00cc25ffaf2736"
   dependencies:
     bindings "1.2.1"
     nan "2.5.0"
     node-pre-gyp "0.6.32"
-
-bcrypt-pbkdf@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.1.tgz#63bc5dcb61331b92bc05fd528953c33462a06f8d"
-  dependencies:
-    tweetnacl "^0.14.3"
 
 binary-extensions@^1.0.0:
   version "1.9.0"
@@ -146,7 +146,7 @@ bluebird@^3.4.6:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
 
-body-parser:
+body-parser@^1.17.2:
   version "1.17.2"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.17.2.tgz#f8892abc8f9e627d42aedafbca66bf5ab99104ee"
   dependencies:
@@ -244,7 +244,7 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-compose-middleware:
+compose-middleware@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/compose-middleware/-/compose-middleware-2.2.0.tgz#6e830b1c5c168d3bf1fec62e3a964c2dd361cec3"
   dependencies:
@@ -291,14 +291,7 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cross-env@^3.1.2:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-3.2.4.tgz#9e0585f277864ed421ce756f81a980ff0d698aba"
-  dependencies:
-    cross-spawn "^5.1.0"
-    is-windows "^1.0.0"
-
-cross-spawn@^5.0.1, cross-spawn@^5.1.0:
+cross-spawn@^5.0.1:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
   dependencies:
@@ -359,6 +352,10 @@ depd@1.1.0:
 destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
+
+dotenv@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
 
 dottie@^2.0.0:
   version "2.0.0"
@@ -443,7 +440,7 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-express:
+express@^4.15.3:
   version "4.15.3"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.3.tgz#bab65d0f03aa80c358408972fc700f916944b662"
   dependencies:
@@ -820,10 +817,6 @@ is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
 
-is-windows@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-1.0.1.tgz#310db70f742d259a16a369202b51af84233310d9"
-
 isarray@~1.0.0, isarray@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
@@ -873,7 +866,7 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.3.6"
 
-jwt-simple:
+jwt-simple@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/jwt-simple/-/jwt-simple-0.5.1.tgz#79ea01891b61de6b68e13e67c0b4b5bda937b294"
 
@@ -1054,7 +1047,7 @@ moment@^2.13.0, "moment@>= 2.9.0":
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
-morgan:
+morgan@^1.8.2:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.8.2.tgz#784ac7734e4a453a9c6e6e8680a9329275c8b687"
   dependencies:
@@ -1118,7 +1111,7 @@ node-pre-gyp@0.6.32:
     tar "~2.2.1"
     tar-pack "~3.3.0"
 
-nodemon:
+nodemon@^1.11.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.11.0.tgz#226c562bd2a7b13d3d7518b49ad4828a3623d06c"
   dependencies:
@@ -1251,20 +1244,13 @@ parseurl@~1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.1.tgz#c8ab8c9223ba34888aa64a297b28853bec18da56"
 
-passport:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/passport/-/passport-0.3.2.tgz#9dd009f915e8fe095b0124a01b8f82da07510102"
-  dependencies:
-    passport-strategy "1.x.x"
-    pause "0.0.1"
-
-passport-http-bearer:
+passport-http-bearer@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/passport-http-bearer/-/passport-http-bearer-1.0.1.tgz#147469ea3669e2a84c6167ef99dbb77e1f0098a8"
   dependencies:
     passport-strategy "1.x.x"
 
-passport-local:
+passport-local@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/passport-local/-/passport-local-1.0.0.tgz#1fe63268c92e75606626437e3b906662c15ba6ee"
   dependencies:
@@ -1273,6 +1259,13 @@ passport-local:
 passport-strategy@1.x.x:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/passport-strategy/-/passport-strategy-1.0.0.tgz#b5539aa8fc225a3d1ad179476ddf236b440f52e4"
+
+passport@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/passport/-/passport-0.3.2.tgz#9dd009f915e8fe095b0124a01b8f82da07510102"
+  dependencies:
+    passport-strategy "1.x.x"
+    pause "0.0.1"
 
 path-is-absolute@^1.0.0:
   version "1.0.1"
@@ -1539,11 +1532,10 @@ request@^2.79.0, request@^2.81.0:
     uuid "^3.0.0"
 
 retry-as-promised@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/retry-as-promised/-/retry-as-promised-2.2.0.tgz#b0463d7fd3cf5b2fed64500ab6e8b8a49c5b8e6c"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/retry-as-promised/-/retry-as-promised-2.3.0.tgz#27bf5ccd999932b31665696825cf3630c27c562d"
   dependencies:
     bluebird "^3.4.6"
-    cross-env "^3.1.2"
     debug "^2.2.0"
 
 rimraf@^2.5.1, rimraf@^2.6.1, rimraf@2:
@@ -1898,8 +1890,8 @@ verror@1.3.6:
     extsprintf "1.0.2"
 
 which@^1.2.9:
-  version "1.2.14"
-  resolved "https://registry.yarnpkg.com/which/-/which-1.2.14.tgz#9a87c4378f03e827cecaf1acdf56c736c01c14e5"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/which/-/which-1.3.0.tgz#ff04bdfc010ee547d780bec38e1ac1c2777d253a"
   dependencies:
     isexe "^2.0.0"
 

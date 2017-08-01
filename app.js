@@ -3,6 +3,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 require('./server/initializers/passport');
+require('./server/config/config.js');
 
 // Set up the express app
 const app = express();
