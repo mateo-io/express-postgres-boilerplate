@@ -1,3 +1,5 @@
+> This repository was created in 2017 and is probably very out of sync with the latest libraries and style. You can use it as reference but I'd suggest you to look for more updated alternatives.
+
 # Express Postgres API
 
 ```
